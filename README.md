@@ -86,7 +86,7 @@ Testing {4991d34b-80a1-4291-83b6-3328366b9097} 31337
 
 [+] CreateProcessWithTokenW OK
 ```
-
+![](assets/poc.png)
 
 ## Final thoughts
 If the user has `SeImpersonate` or `SeAssignPrimaryToken` privileges then you are **SYSTEM**.
