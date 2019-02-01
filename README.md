@@ -3,7 +3,7 @@
 
 ## Summary
 [RottenPotatoNG][1] and its [variants][6] leverages the privilege escalation chain based on [`BITS`][3] [service](https://github.com/breenmachine/RottenPotatoNG/blob/4eefb0dd89decb9763f2bf52c7a067440a9ec1f0/RottenPotatoEXE/MSFRottenPotato/MSFRottenPotato.cpp#L126
-) having the MiTM listener on `127.0.0.1:6666` ad when you have `SeImpersonate` or `SeAssignPrimaryToken` privileges. During a Windows build review we found a setup where `BITS` was was intentionally disabled and port `6666` was taken.
+) having the MiTM listener on `127.0.0.1:6666` and when you have `SeImpersonate` or `SeAssignPrimaryToken` privileges. During a Windows build review we found a setup where `BITS` was intentionally disabled and port `6666` was taken.
 
 We decided to weaponize [RottenPotatoNG][1]: **Say hello to Juicy Potato**.
 
@@ -83,6 +83,11 @@ It's nearly impossible to prevent the abuse of all these COM Servers. You could 
 The actual solution is to protect sensitive accounts and applications which run under the `* SERVICE` accounts.
 Stopping `DCOM` would certainly inhibit this exploit but could have a serious impact on the underlying OS.
 
+## Binaries [![Build status](https://ci.appveyor.com/api/projects/status/hcht6wpfjsrq5389?svg=true)](https://ci.appveyor.com/project/ohpe/juicy-potato)
+ An automatic build is available. Binaries can be downloaded from the Artifacts section [here](https://ci.appveyor.com/project/ohpe/juicy-potato/build/artifacts).
+ 
+ Also available in [BlackArch](https://blackarch.org).
+ 
 ## Authors
 - [Andrea Pierini](https://twitter.com/decoder_it)
 - [Giuseppe Trotta](https://twitter.com/Giutro)
